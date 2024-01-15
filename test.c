@@ -25,7 +25,7 @@ int main()
 			if (i == 0 || i == 350 || j == 0 || j == 700)
 				mlx_put_image_to_window(point, windows, wall, j, i);
 			else
-				mlx_put_image_to_window(point, windows, ground, j, i);
+				mlx_put_image_to_windo1w(point, windows, ground, j, i);
 			j += width;
 		}
 		i += height;

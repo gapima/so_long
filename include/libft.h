@@ -6,7 +6,7 @@
 /*   By: gapima <gapima@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 16:44:18 by gapima            #+#    #+#             */
-/*   Updated: 2024/01/15 17:03:40 by gapima           ###   ########.fr       */
+/*   Updated: 2024/01/17 19:27:24 by gapima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
@@ -36,5 +37,6 @@ int		print_ptr(unsigned long nbr, char *base);
 int		print_nbr(int nbr, char *str, int index, int flag_check);
 int		print_unint(unsigned int nbr);
 int		print_hex(unsigned int nbr, char *str, int index, int hash_check);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif

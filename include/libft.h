@@ -6,7 +6,7 @@
 /*   By: gapima <gapima@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 16:44:18 by gapima            #+#    #+#             */
-/*   Updated: 2024/01/17 19:27:24 by gapima           ###   ########.fr       */
+/*   Updated: 2024/01/18 17:22:56 by gapima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int		print_nbr(int nbr, char *str, int index, int flag_check);
 int		print_unint(unsigned int nbr);
 int		print_hex(unsigned int nbr, char *str, int index, int hash_check);
 void	*ft_calloc(size_t nmemb, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif

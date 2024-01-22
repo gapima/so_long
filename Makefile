@@ -20,7 +20,7 @@ RM = rm -f
 INC = ./include
 LIBFT = ./libft
 
-FILES = srcs/validmaps.c
+FILES = srcs/validmaps.c main.c
 OBJS = $(FILES:.c=.o)
 
 

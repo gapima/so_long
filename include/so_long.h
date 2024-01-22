@@ -23,5 +23,6 @@ typedef struct s_map
 
 } t_map;
 
+t_map   f_validmaps(char *file);
 
 #endif

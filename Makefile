@@ -1,45 +1,47 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: gapima <gapima@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/12 11:19:15 by gcoqueir          #+#    #+#              #
-#    Updated: 2024/01/17 19:03:12 by gapima           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
 NAME = so_long
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g3 -I$(INC)
-XFLAGS =  -lmlx
+CFLAGS = -Wall -Wextra -Werror -g3
 RM = rm -f
 
 INC = ./include
-LIBFT = ./libft
+LIBFT = ./lib/libft
+LIBMLX = ./lib/MLX42
 
-FILES = srcs/validmaps.c main.c
-OBJS = $(FILES:.c=.o)
+HEADERS = -I $(INC) -I $(LIBMLX)/include
+LIBS = ./lib/libft/libft.a $(LIBMLX)/build/libmlx42.a #-ldl -lglfw -pthread -lm
 
+OBJECTSDIR = obj/
 
-all: $(NAME)
+FILES = src/main.c src/validmaps.c
+
+OBJS = $(FILES:%.c=%.o)
+
+all: libmlx create_mkdir $(NAME)
+
+create_mkdir:
+	@mkdir -p $(OBJECTSDIR)
+
+libmlx:
+	@cmake $(LIBMLX) -B $(LIBMLX)/build && make -C $(LIBMLX)/build -j4
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(HEADERS)	-c $< -o $@
 
 $(NAME): $(OBJS)
 	@make -C $(LIBFT)
-	@$(CC) $(OBJS) $(CFLAGS) $(LIBFT)/libft.a -o $(NAME) $(XFLAGS)
+	@$(CC) $(OBJS) $(LIBS) $(HEADERS) -o $(NAME)
 	@echo "SUCCESS!!"
 
 clean:
-	@make clean -C $(LIBFT)
-	@$(RM) $(OBJS)
+	@rm -rf $(OBJS)
+	@make clean -C lib/libft
+	@rm -rf $(LIBMLX)/build
 
 fclean: clean
-	@make fclean -C $(LIBFT)
+	@make fclean -C lib/libft
+	@rm -rf $(LIBMLX)/build	
 	@$(RM) $(NAME)
 
 re: fclean all

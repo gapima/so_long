@@ -2,7 +2,7 @@
 NAME = so_long
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror -g3 -Wunreachable-code -Ofast
 RM = rm -f
 
 INC = ./include
@@ -10,7 +10,7 @@ LIBFT = ./lib/libft
 LIBMLX = ./lib/MLX42
 
 HEADERS = -I $(INC) -I $(LIBMLX)/include
-LIBS = ./lib/libft/libft.a $(LIBMLX)/build/libmlx42.a #-ldl -lglfw -pthread -lm
+LIBS = ./lib/libft/libft.a $(LIBMLX)/build/libmlx42.a -ldl -lglfw -pthread -lm
 
 OBJECTSDIR = obj/
 

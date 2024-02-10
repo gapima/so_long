@@ -19,6 +19,7 @@ t_map   *f_validmaps(char *file)
 	i_map = ft_calloc(sizeof(t_map), 1);
 	if (!i_map)
 		return (NULL);
+	i_map->lines = len;
 	i_map->map = ft_calloc(sizeof(char *), len + 1);
 	if (!i_map->map)
 	{
@@ -30,6 +31,7 @@ t_map   *f_validmaps(char *file)
 	while (len)
 	{
 		line = get_next_line(fd);
+		i_map->collums = ft_strlen(line);
 		i_map->map[index] = ft_calloc(sizeof(char), ft_strlen(line) + 1);
 		if (!i_map->map[index])
 		{
@@ -46,4 +48,13 @@ t_map   *f_validmaps(char *file)
 		len--;
 	}
 	return (i_map);
+}
+
+void	f_create_textures(t_textures *textures, mlx_t *mlx)
+{
+	textures->wall_texture = mlx_load_png(WALL);
+	textures->floor_texture = mlx_load_png(FLOOR);
+	textures->wall_img = mlx_texture_to_image(mlx, textures->wall_texture);
+	textures->floor_img = mlx_texture_to_image(mlx, textures->floor_texture);
+
 }

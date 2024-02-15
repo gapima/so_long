@@ -4,7 +4,7 @@
 int main(int argc, char *argv[])
 {
 	unsigned int	len;
-	t_map			*i_map;
+	t_data			data;
 
 	if (!(argc == 2))
 		return (1);
@@ -13,10 +13,9 @@ int main(int argc, char *argv[])
 		return (1);
 	if (ft_strncmp(&argv[1][len - 4], ".ber", 4))
 		return (1);
-	i_map = f_mallocmap(argv[1]);
-	if (!i_map)
+	data.map = f_mallocmap(argv[1]);
+	if (!data.map)
 		return (1);
-	if (f_play(i_map) == 1)
-		return (1);
+	f_start_game(&data);
 	return (0);
 }

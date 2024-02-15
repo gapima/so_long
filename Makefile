@@ -14,7 +14,8 @@ LIBS = ./lib/libft/libft.a $(LIBMLX)/build/libmlx42.a -ldl -lglfw -pthread -lm
 
 OBJECTSDIR = obj/
 
-FILES = src/main.c src/validmaps.c
+FILES = src/main.c src/actions_moves.c src/hooks_map.c src/paint_objects.c src/paint_player.c \
+			src/start_game.c src/validmaps.c src/free_map.c
 
 OBJS = $(FILES:%.c=%.o)
 

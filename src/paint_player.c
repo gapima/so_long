@@ -3,7 +3,7 @@
 
 void	f_paint_player(t_data *data, int x, int y)
 {
-	mlx_image_to_window(data->mlx, data->textures->player_img, y * SIZE_IMG, x * SIZE_IMG);
+	mlx_image_to_window(data->mlx, data->textures->player_img, x * SIZE_IMG, y * SIZE_IMG);
 }
 
 void	f_render_move_player(t_data *data, int y, int x)

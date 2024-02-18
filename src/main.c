@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
 	data.map = f_mallocmap(argv[1]);
 	if (!data.map)
 		return (1);
+	// for (size_t i = 0; i <  data.map->lines; i++)
+	// 	ft_printf("%s", data.map->map[i]);
 	f_start_game(&data);
 	return (0);
 }

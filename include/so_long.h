@@ -13,8 +13,8 @@
 # define PLAYER_D "./textures/player.png"
 # define COIN "./textures/coin.png"
 
-# define SIZE_IMG 64
-# define TILE_SIZE 64
+# define SIZE_IMG 55
+# define TILE_SIZE 55
 
 typedef struct s_positions
 {
@@ -72,11 +72,11 @@ void	f_paint_coin(t_data *data, int x, int y);
 void	f_paint_player(t_data *data, int x, int y);
 void	f_render_move_player(t_data *data, int y, int x);
 void	f_free_map(char **map);
-void	f_delete_images(t_data data);
+void	f_delete_images(t_data *data);
 void	f_delete_textures(t_data *data);
 void	f_close_window(void *key);
 
-int		f_getmap(t_data *data, int fd, int index, unsigned int len);
-int	f_free_end_game(t_data *data);
+int		f_getmap(t_map *map, int fd, int index, unsigned int len);
+int		f_free_end_game(t_data *data);
 
 #endif

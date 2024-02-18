@@ -9,7 +9,7 @@ void	f_put_player_items(t_data *data)
 	while (y < data->map->lines)
 	{
 		x = 0;
-		while (y < data->map->collums)
+		while (x < data->map->collums)
 		{
 			if (data->map->map[y][x] == 'P')
 				f_paint_player(data, x, y);
@@ -27,6 +27,7 @@ void	f_start_game(t_data *data)
 	size_t			x;
 
 	mlx_set_setting(MLX_MAXIMIZED, true);
+	data->move = 0;
 	data->mlx = mlx_init(SIZE_IMG * data->map->collums, SIZE_IMG * data->map->lines, "Plus Ultra", true);
 	// if (!mlx)
 	// 	return (false);
@@ -38,7 +39,7 @@ void	f_start_game(t_data *data)
 	while (y < data->map->lines)
 	{
 		x = 0;
-		while (y < data->map->collums)
+		while (x < data->map->collums)
 		{
 			if (data->map->map[y][x] == '1')
 				f_paint_wall(data, x, y);
@@ -48,6 +49,7 @@ void	f_start_game(t_data *data)
 		}
 		y++;
 	}
+	ft_printf("CCC\n");
 	f_put_player_items(data);
 	mlx_key_hook(data->mlx, &f_control_player, data);
 	mlx_loop_hook(data->mlx, &f_close_window, data);

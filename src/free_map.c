@@ -32,10 +32,10 @@ void	f_free_map(char **map)
 
 int	f_free_end_game(t_data *data)
 {
-	delete_textures(data->textures);
-	delete_images(data->mlx, data->textures);
+	f_delete_textures(data);
+	f_delete_images(data);
 	mlx_close_window(data->mlx);
 	mlx_terminate(data->mlx);
-	free_matrix(data->map->map);
+	f_free_map(data->map->map);
 	exit (EXIT_SUCCESS);
 }

@@ -60,8 +60,10 @@ void	f_create_textures(t_data *data)
 	data->textures->floor_texture = mlx_load_png(FLOOR);
 	data->textures->player_texture = mlx_load_png(PLAYER_D);
 	data->textures->coin_texture = mlx_load_png(COIN);	
+	data->textures->fissure_texture = mlx_load_png(FISSURE);	
 	data->textures->wall_img = mlx_texture_to_image(data->mlx, data->textures->wall_texture);
 	data->textures->floor_img = mlx_texture_to_image(data->mlx, data->textures->floor_texture);
 	data->textures->player_img = mlx_texture_to_image(data->mlx, data->textures->player_texture);
 	data->textures->coin_img = mlx_texture_to_image(data->mlx, data->textures->coin_texture);
+	data->textures->fissure_img = mlx_texture_to_image(data->mlx, data->textures->fissure_texture);
 }

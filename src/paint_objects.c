@@ -15,3 +15,8 @@ void	f_paint_coin(t_data *data, int x, int y)
 {
 	mlx_image_to_window(data->mlx, data->textures->coin_img, x * SIZE_IMG, y * SIZE_IMG);
 }
+
+void	f_paint_fissure(t_data *data, int x, int y)
+{
+	mlx_image_to_window(data->mlx, data->textures->fissure_img, x * SIZE_IMG, y * SIZE_IMG);
+}

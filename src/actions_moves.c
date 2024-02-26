@@ -5,13 +5,22 @@ static void	f_next_action(t_data *data, int y, int x)
 {
 	data->map->map[data->positions.y_player][data->positions.x_player] = '0';
 	f_render_move_player(data, y, x);
-	ft_printf("Move: %d\n", ++data->move);
-	if ((data->map->map[y][x] = 'C'))
+	ft_printf("Moves: %d\n", ++data->move);
+    if ((data->map->map[y][x] == 'C'))
 	{
 		data->map->count_coin--;
 		data->map->map[y][x] = '0';
-		f_paint_floor(data, (x * SIZE_IMG), (y * SIZE_IMG));
-		f_paint_player(data, (x * SIZE_IMG), (y * SIZE_IMG));
+		f_paint_floor(data, x, y);
+		f_paint_player(data, x, y);
+	}
+	if (data->map->count_coin == 0)
+	{
+		f_paint_fissure(data, data->positions.x_fissure, data->positions.y_fissure);
+	}
+	if (data->map->map[y][x] == 'E')
+	{
+		ft_printf("Finsh Game!!!\n");
+		f_free_end_game(data);
 	}
 	data->map->map[y][x] = 'P';
 }

@@ -4,7 +4,8 @@ void	f_put_player_items(t_data *data)
 {
 	size_t	x;
 	size_t	y;
-
+	
+	data->map->count_coin = 0;
 	y = 0;
 	while (y < data->map->lines)
 	{
@@ -14,7 +15,10 @@ void	f_put_player_items(t_data *data)
 			if (data->map->map[y][x] == 'P')
 				f_paint_player(data, x, y);
 			else if (data->map->map[y][x] == 'C')
+			{
 				f_paint_coin(data, x, y);
+				data->map->count_coin++;
+			}
 			x++;
 		}
 		y++;
@@ -45,11 +49,16 @@ void	f_start_game(t_data *data)
 				f_paint_wall(data, x, y);
 			else
 				f_paint_floor(data, x, y);
+			if (data->map->map[y][x] == 'E')
+			{
+				data->positions.y_fissure = y;
+				data->positions.x_fissure = x;
+			}	
 			x++;
 		}
 		y++;
 	}
-	ft_printf("CCC\n");
+	ft_printf("a\n");
 	f_put_player_items(data);
 	mlx_key_hook(data->mlx, &f_control_player, data);
 	mlx_loop_hook(data->mlx, &f_close_window, data);

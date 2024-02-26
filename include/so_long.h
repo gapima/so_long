@@ -12,6 +12,7 @@
 # define PLAYER_U "./textures/player.png"
 # define PLAYER_D "./textures/player.png"
 # define COIN "./textures/coin.png"
+# define FISSURE "./textures/fissure.png"
 
 # define SIZE_IMG 55
 # define TILE_SIZE 55
@@ -20,8 +21,10 @@ typedef struct s_positions
 {
 	int		x_player;
 	int		y_player;
-	int		x_out;
-	int		y_out;
+	int		x_end;
+	int		y_end;
+	int		x_fissure;
+	int		y_fissure;
 } t_positions;
 
 typedef struct s_map
@@ -42,6 +45,8 @@ typedef struct s_textures
 	mlx_texture_t 	*floor_texture;
 	mlx_texture_t 	*player_texture;
 	mlx_texture_t 	*coin_texture;
+	mlx_image_t		*fissure_img;
+	mlx_texture_t	*fissure_texture;
 	int				last_move_player;
 } t_textures;
 
@@ -75,6 +80,7 @@ void	f_free_map(char **map);
 void	f_delete_images(t_data *data);
 void	f_delete_textures(t_data *data);
 void	f_close_window(void *key);
+void	f_paint_fissure(t_data *data, int x, int y);
 
 int		f_getmap(t_map *map, int fd, int index, unsigned int len);
 int		f_free_end_game(t_data *data);

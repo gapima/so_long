@@ -33,11 +33,7 @@ void	f_start_game(t_data *data)
 	mlx_set_setting(MLX_MAXIMIZED, true);
 	data->move = 0;
 	data->mlx = mlx_init(SIZE_IMG * data->map->collums, SIZE_IMG * data->map->lines, "Plus Ultra", true);
-	// if (!mlx)
-	// 	return (false);
 	data->textures = ft_calloc(sizeof(t_textures), 1);
-	// if (!data->textures)
-	// 	return (false);
 	f_create_textures(data);
 	y = 0;
 	while (y < data->map->lines)

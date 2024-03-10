@@ -6,18 +6,13 @@ static void f_checkargs( int argc, char *argv[])
 
 	if (!(argc == 2))
 	{
-		ft_printf("\nInvalid quantities files.\n");
+		ft_printf("Invalid quantities files.\n");
 		exit (EXIT_FAILURE);
 	}
 	len = ft_strlen(argv[1]);
-	if (!(len >= 4))
+	if (!(len >= 4) || ft_strncmp(&argv[1][len - 4], ".ber", 4))
 	{
-		ft_printf("\nFile: %s Invalid extension.\n", argv);
-		exit (EXIT_FAILURE);
-	}
-	if (ft_strncmp(&argv[1][len - 4], ".ber", 4))
-	{
-		ft_printf("\nFile: %s Invalid extension.\n", argv);
+		ft_printf("File: %s Invalid extension.\n", argv[1]);
 		exit (EXIT_FAILURE);
 	}	
 }

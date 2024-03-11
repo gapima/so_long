@@ -19,12 +19,13 @@ static void f_checkargs( int argc, char *argv[])
 
 int main(int argc, char *argv[])
 {
-	t_data			data;
+	t_data	data;
 	
 	f_checkargs(argc, argv);
 	data.map = f_mallocmap(argv[1]);
 	if (!data.map)
 		return (1);
+	f_valid_map(&data);
 	f_start_game(&data);
 	return (0);
 }

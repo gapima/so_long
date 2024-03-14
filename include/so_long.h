@@ -35,6 +35,7 @@ typedef struct s_map
 	int		count_coin;
 	int		count_P;
 	int		count_E;
+	int		path_check;
 } t_map;
 
 typedef struct s_textures
@@ -86,9 +87,10 @@ void	f_paint_fissure(t_data *data, int x, int y);
 void	f_valid_objects(t_data *data);
 void	f_valid_rect_map(t_data *data);
 void	f_valid_surround(t_data *data);
-void	f_valid_map(t_data *data);
+void	f_valid_map(t_data *data, t_map *copy);
 void	f_valid_difchar(t_data *data);
 void	f_valid_difchar(t_data *data);
+void	f_floodfill(t_map *map, int y, int x);
 
 int		f_getmap(t_map *map, int fd, int index, unsigned int len);
 int		f_free_end_game(t_data *data);

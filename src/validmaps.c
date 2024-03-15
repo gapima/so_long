@@ -104,19 +104,20 @@ void 	f_valid_objects(t_data *data)
 	}
 }
 
-void	f_valid_map(t_data *data, t_map *copy)
+void	f_valid_map(t_data *data, t_data *copy)
 {
 	f_valid_difchar(data);
 	f_valid_objects(data);
 	f_valid_rect_map(data);
 	f_valid_surround(data);
-	copy->collums = data->map->collums;
-	copy->lines = data->map->lines;
+	copy->map->collums = data->map->collums;
+	copy->map->lines = data->map->lines;
 	f_floodfill(copy, data->positions.y_player, data->positions.x_player);
-	if (copy->count_coin != data->map->count_coin || copy->path_check != 1)
-	{
-		f_free_map(&copy->map);
-		f_free_map(&data->map->map);
-		ft_printf("Error\nIt doesn't match the requirements!\n");
-	}
+	// if (copy->map->count_coin != data->map->count_coin || copy->map->path_check != 1)
+	// {
+	// 	//f_free_map(copy->map);
+	// 	//f_free_map(data->map->map);
+	// 	ft_printf("Error\nIt doesn't match the requirements!\n");
+	// 	exit (EXIT_FAILURE);
+	// }
 }

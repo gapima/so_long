@@ -37,10 +37,9 @@ void	f_start_game(t_data *data)
 		x = 0;
 		while (x < data->map->collums)
 		{
+			f_paint_floor(data, x, y);
 			if (data->map->map[y][x] == '1')
 				f_paint_wall(data, x, y);
-			else
-				f_paint_floor(data, x, y);
 			if (data->map->map[y][x] == 'E')
 			{
 				data->positions.y_fissure = y;

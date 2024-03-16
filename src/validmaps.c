@@ -115,10 +115,11 @@ void	f_valid_map(t_data *data, t_data *copy)
 	f_floodfill(copy, copy->positions.y_player, copy->positions.x_player);
 	if (copy->map->count_coin != data->map->count_coin || copy->map->path_check != 1)
 	{
-		//f_free_map(copy->map);
-		//f_free_map(data->map->map);
-		ft_printf("%d\n%d\n", copy->map->count_coin, data->map->count_coin);
-		ft_printf("Error\nIt doesn't match the requirements!\n");
+		f_free_map(copy->map->map);
+		f_free_map(data->map->map);
+		free(copy->map);
+		free(data->map);
+		ft_printf("Invalid Path!\n");
 		exit (EXIT_FAILURE);
 	}
 }

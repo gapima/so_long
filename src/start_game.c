@@ -5,7 +5,6 @@ void	f_put_player_items(t_data *data)
 	size_t	x;
 	size_t	y;
 	
-	//data->map->count_coin = 0;
 	y = 0;
 	while (y < data->map->lines)
 	{
@@ -15,10 +14,7 @@ void	f_put_player_items(t_data *data)
 			if (data->map->map[y][x] == 'P')
 				f_paint_player(data, x, y);
 			else if (data->map->map[y][x] == 'C')
-			{
 				f_paint_coin(data, x, y);
-				//data->map->count_coin++;
-			}
 			x++;
 		}
 		y++;

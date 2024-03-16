@@ -91,6 +91,7 @@ void	f_valid_map(t_data *data, t_data *copy);
 void	f_valid_difchar(t_data *data);
 void	f_valid_difchar(t_data *data);
 void	f_floodfill(t_data *copy, size_t y, size_t x);
+void	f_get_position(t_data *copy);
 
 int		f_getmap(t_map *map, int fd, int index, unsigned int len);
 int		f_free_end_game(t_data *data);

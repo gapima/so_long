@@ -43,7 +43,7 @@ fclean: clean
 
 re: fclean all
 
-val:
-	valgrind --leak-check=full --show-leak-kinds=all --suppressions=codam.sup --track-origins=yes --log-file=log ./$(NAME) maps/map_tiny.ber
+val: all
+	valgrind --leak-check=full --show-leak-kinds=all --suppressions=codam.sup --track-origins=yes ./$(NAME) maps/map_tiny.ber
 
 .PHONY: all clean fclean re

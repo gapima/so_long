@@ -1,30 +1,48 @@
 #include "so_long.h"
 
-t_map	*f_mallocmap(char *file)
+static void	f_map(t_map *map, unsigned int len, char *file)
 {
-	int				fd;
-	t_map			*map;
-	unsigned int	len;
-
-	len = 0;
-	fd = open(file, O_RDONLY);
-	if (fd < 0)
-		return (NULL);
-	while (get_next_line(fd))
-		len++;
-	close(fd);
-	map = ft_calloc(sizeof(t_map), 1);
-	if (!map)
-		return (NULL);
 	map->lines = len;
 	map->map = ft_calloc(sizeof(char *), len + 1);
 	if (!map->map)
 	{
 		free(map);
-		return (NULL);
+		f_exit_error("Invalid malloc.\n");
 	}
 	if (f_getmap(map, file, 0, len) == 1)
+	{
+		free(map->map);
+		free(map);
+		f_exit_error("Invalid get map.\n");
+	}
+}
+
+t_map	*f_mallocmap(char *file)
+{
+	int				fd;
+	t_map			*map;
+	unsigned int	len;
+	char			*str;
+
+	len = 1;
+	fd = open(file, O_RDONLY);
+	if (fd < 0)
 		return (NULL);
+	str = get_next_line(fd);
+	if (!str)
+		f_exit_error("Invalid map.\n");
+	while (str)
+	{
+		free(str);
+		str = get_next_line(fd);
+		if (str)
+			len++;
+	}
+	close(fd);
+	map = ft_calloc(sizeof(t_map), 1);
+	if (!map)
+		return (NULL);
+	f_map(map, len, file);
 	return (map);
 }
 

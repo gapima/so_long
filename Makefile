@@ -15,7 +15,8 @@ LIBS = ./lib/libft/libft.a $(LIBMLX)/build/libmlx42.a -ldl -lglfw -pthread -lm
 OBJECTSDIR = obj/
 
 FILES = src/main.c src/actions_moves.c src/hooks_map.c src/paint_objects.c src/paint_player.c \
-			src/start_game.c src/validmaps.c src/free_map.c src/memory.c src/floodfill.c
+			src/start_game.c src/validmaps.c src/free_map.c src/memory.c src/floodfill.c \
+			src/exit_error.c src/init_objects.c
 
 OBJS = $(FILES:%.c=%.o)
 
@@ -46,5 +47,8 @@ fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all
+
+val:
+	valgrind --leak-check=full --show-leak-kinds=all --suppressions=codam.sup --track-origins=yes --log-file=log ./$(NAME) maps/map_tiny.ber
 
 .PHONY: all clean fclean re

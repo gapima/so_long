@@ -1,0 +1,36 @@
+{
+   <MLX_CODAM>
+   Memcheck:Leak
+   fun:_dl_catch_exception
+}
+
+{
+   <MLX_CODAM>
+   Memcheck:Leak
+   fun:mlx_init
+}
+
+{
+   <MLX_CODAM>
+   Memcheck:Leak
+   fun:XrmGetStringDatabase
+}
+
+{
+   <MLX_CODAM>
+   Memcheck:Leak
+   fun:_XrmInitParseInfo
+}
+
+{
+   <MLX_CODAM>
+   Memcheck:Leak
+   fun:__tls_get_addr
+}
+
+{
+   <MLX_CODAM>
+   Memcheck:Leak
+   fun:__pthread_once_slow
+}
+

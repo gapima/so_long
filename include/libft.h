@@ -9,7 +9,7 @@
 # include <stdbool.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 1
 # endif
 
 # define UPPER_HEX "0123456789ABCDEF"
@@ -24,7 +24,7 @@ int		ft_putchar(char c);
 int		ft_putnbr(int n);
 int		ft_printf(const char *s, ...);
 int		ft_print_point(long nbr, const char *base);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char	*get_next_line(int fd);
 char	*ft_strjoin(char *s1, char *s2);

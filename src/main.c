@@ -1,6 +1,6 @@
 #include "../include/so_long.h"
 
-static void f_checkargs( int argc, char *argv[])
+static void	f_checkargs( int argc, char *argv[])
 {
 	unsigned int	len;
 
@@ -14,20 +14,21 @@ static void f_checkargs( int argc, char *argv[])
 	{
 		ft_printf("File: %s Invalid extension.\n", argv[1]);
 		exit (EXIT_FAILURE);
-	}	
+	}
 }
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	t_data	data;
-	t_data	copy;
-	
+
 	f_checkargs(argc, argv);
 	data.map = f_mallocmap(argv[1]);
-	copy.map = f_mallocmap(argv[1]);
-	if (!(data.map || copy.map))
+	if (!data.map)
+	{
+		f_free_map2(&data);
 		return (1);
-	f_valid_map(&data, &copy);
+	}
+	f_valid_map(&data, argv[1]);
 	f_start_game(&data);
 	return (0);
 }

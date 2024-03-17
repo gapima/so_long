@@ -3,13 +3,15 @@
 
 void	f_control_player(mlx_key_data_t keyd, void *param)
 {
-	t_data	*data;
 	int		y;
 	int		x;
+	t_data	*data;
 
 	data = (t_data *)param;
-	data->positions.x_player = data->textures->player_img->instances->x / TILE_SIZE;
-	data->positions.y_player = data->textures->player_img->instances->y / TILE_SIZE;
+	data->positions.x_player = data->textures->player_img->instances->x \
+		/ TILE_SIZE;
+	data->positions.y_player = data->textures->player_img->instances->y \
+		/ TILE_SIZE;
 	x = data->positions.x_player;
 	y = data->positions.y_player;
 	if (keyd.key == MLX_KEY_W && keyd.action == MLX_PRESS \

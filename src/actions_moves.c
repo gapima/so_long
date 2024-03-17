@@ -1,4 +1,3 @@
-
 #include "../include/so_long.h"
 
 static void	f_next_action(t_data *data, int y, int x)
@@ -6,7 +5,7 @@ static void	f_next_action(t_data *data, int y, int x)
 	data->map->map[data->positions.y_player][data->positions.x_player] = '0';
 	f_render_move_player(data, y, x);
 	ft_printf("Moves: %d\n", ++data->move);
-    if ((data->map->map[y][x] == 'C'))
+	if ((data->map->map[y][x] == 'C'))
 	{
 		data->map->count_coin--;
 		data->map->map[y][x] = '0';
@@ -14,8 +13,10 @@ static void	f_next_action(t_data *data, int y, int x)
 		f_paint_player(data, x, y);
 	}
 	if (data->map->count_coin == 0)
-		f_paint_fissure(data, data->positions.x_fissure, data->positions.y_fissure);
-	if (data->positions.y_fissure == y && data->positions.x_fissure == x && data->map->count_coin == 0)
+		f_paint_shenlong(data, data->positions.x_shenlong, \
+			data->positions.y_shenlong);
+	if (data->positions.y_shenlong == y \
+		&& data->positions.x_shenlong == x && data->map->count_coin == 0)
 	{
 		ft_printf("Finsh Game!!!\n");
 		f_free_end_game(data);
@@ -25,7 +26,7 @@ static void	f_next_action(t_data *data, int y, int x)
 
 void	f_action_left(t_data *data, int m_y, int m_x)
 {
-	int x;
+	int	x;
 	int	y;
 
 	x = m_x - 1;
@@ -40,7 +41,7 @@ void	f_action_left(t_data *data, int m_y, int m_x)
 
 void	f_action_right(t_data *data, int m_y, int m_x)
 {
-	int x;
+	int	x;
 	int	y;
 
 	x = m_x + 1;
@@ -55,7 +56,7 @@ void	f_action_right(t_data *data, int m_y, int m_x)
 
 void	f_action_up(t_data *data, int m_y, int m_x)
 {
-	int x;
+	int	x;
 	int	y;
 
 	x = m_x;
@@ -69,7 +70,7 @@ void	f_action_up(t_data *data, int m_y, int m_x)
 
 void	f_action_down(t_data *data, int m_y, int m_x)
 {
-	int x;
+	int	x;
 	int	y;
 
 	x = m_x;

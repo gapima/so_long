@@ -29,6 +29,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*get_next_line(int fd);
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strrchr(char *s, int c);
+char	*ft_itoa(int n);
+char	*ft_strdup(const char *s);
 
 void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_bzero(void *s, size_t n);

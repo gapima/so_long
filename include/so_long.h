@@ -10,6 +10,7 @@
 # define PLAYER "./textures/player.png"
 # define COIN "./textures/coin.png"
 # define SHENLONG "./textures/shenlong.png"
+# define RADAR "./textures/radar_dragon.png"
 
 # define SIZE_IMG 55
 # define TILE_SIZE 55
@@ -41,12 +42,14 @@ typedef struct s_textures
 	mlx_image_t		*floor_img;
 	mlx_image_t		*player_img;
 	mlx_image_t		*coin_img;
+	mlx_image_t		*shenlong_img;
+	mlx_image_t		*radar_img;
 	mlx_texture_t	*wall_texture;
 	mlx_texture_t	*floor_texture;
 	mlx_texture_t	*player_texture;
 	mlx_texture_t	*coin_texture;
-	mlx_image_t		*shenlong_img;
 	mlx_texture_t	*shenlong_texture;
+	mlx_texture_t	*radar_texture;
 	int				last_move_player;
 }	t_textures;
 

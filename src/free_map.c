@@ -7,6 +7,7 @@ void	f_delete_textures(t_data *data)
 	mlx_delete_texture(data->textures->player_texture);
 	mlx_delete_texture(data->textures->coin_texture);
 	mlx_delete_texture(data->textures->shenlong_texture);
+	mlx_delete_texture(data->textures->radar_texture);
 }
 
 void	f_delete_images(t_data *data)
@@ -16,6 +17,7 @@ void	f_delete_images(t_data *data)
 	mlx_delete_image(data->mlx, data->textures->player_img);
 	mlx_delete_image(data->mlx, data->textures->coin_img);
 	mlx_delete_image(data->mlx, data->textures->shenlong_img);
+	mlx_delete_image(data->mlx, data->textures->radar_img);
 }
 
 void	f_free_map2(t_data *data)

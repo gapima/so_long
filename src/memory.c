@@ -82,6 +82,7 @@ void	f_create_textures(t_data *data)
 	data->textures->player_texture = mlx_load_png(PLAYER);
 	data->textures->coin_texture = mlx_load_png(COIN);
 	data->textures->shenlong_texture = mlx_load_png(SHENLONG);
+	data->textures->radar_texture = mlx_load_png(RADAR);
 	data->textures->wall_img = mlx_texture_to_image(data->mlx, \
 		data->textures->wall_texture);
 	data->textures->floor_img = mlx_texture_to_image(data->mlx, \
@@ -92,4 +93,6 @@ void	f_create_textures(t_data *data)
 		data->textures->coin_texture);
 	data->textures->shenlong_img = mlx_texture_to_image(data->mlx, \
 		data->textures->shenlong_texture);
+	data->textures->radar_img = mlx_texture_to_image(data->mlx, \
+		data->textures->radar_texture);
 }

@@ -2,9 +2,15 @@
 
 static void	f_next_action(t_data *data, int y, int x)
 {
+	char	*str;
+
 	data->map->map[data->positions.y_player][data->positions.x_player] = '0';
 	f_render_move_player(data, y, x);
 	ft_printf("Moves: %d\n", ++data->move);
+	str = ft_itoa(data->move);
+	mlx_image_to_window(data->mlx, data->textures->radar_img, 0, 0);
+	mlx_put_string(data->mlx, str, 20, 20);
+	free(str);
 	if ((data->map->map[y][x] == 'C'))
 	{
 		data->map->count_coin--;

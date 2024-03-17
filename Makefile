@@ -12,18 +12,13 @@ LIBMLX = ./lib/MLX42
 HEADERS = -I $(INC) -I $(LIBMLX)/include
 LIBS = ./lib/libft/libft.a $(LIBMLX)/build/libmlx42.a -ldl -lglfw -pthread -lm
 
-OBJECTSDIR = obj/
-
 FILES = src/main.c src/actions_moves.c src/hooks_map.c src/paint_objects.c src/paint_player.c \
 			src/start_game.c src/validmaps.c src/free_map.c src/memory.c src/floodfill.c \
 			src/exit_error.c src/init_objects.c
 
 OBJS = $(FILES:%.c=%.o)
 
-all: libmlx create_mkdir $(NAME)
-
-create_mkdir:
-	@mkdir -p $(OBJECTSDIR)
+all: libmlx $(NAME)
 
 libmlx:
 	@cmake $(LIBMLX) -B $(LIBMLX)/build && make -C $(LIBMLX)/build -j4

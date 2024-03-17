@@ -94,6 +94,7 @@ void	f_get_position(t_data *copy);
 void	f_free_map2(t_data *data);
 void	f_exit_error(char *error);
 void	f_init_objects(t_data *data);
+void	f_paint_radar(t_data *data);
 
 int		f_getmap(t_map *map, char *file, int index, unsigned int len);
 int		f_free_end_game(t_data *data);

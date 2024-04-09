@@ -19,15 +19,17 @@ Este projeto utiliza a biblioteca MLX42, uma poderosa ferramenta baseada na X11,
 Siga estes passos simples para executar o jogo:
 
 1. **Clone o Repositório:**
+	```bash
 	git clone git@github.com:gapima/so_long.git
 
 
 2. **Compile o Projeto:**
+	```bash
 	make
 
 3. **Execute o Jogo:**
+	```bash
 	./solong maps/nome_mapa
-
 
 
 ## Controles

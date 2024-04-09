@@ -46,7 +46,7 @@ Aqui estão algumas capturas de tela emocionantes do jogo:
 ![Esferas do Dragão](./img/dragonball.png)
 
 - **Contador de passo:**
-![Contador de passo](./img/radardragon.jpg)
+![Contador de passo](./img/radardragon.png)
 
 
 - **Shenlong (Saída):**

@@ -4,7 +4,7 @@
 
 ## Descrição
 
-Bem-vindo ao so_long Dragon Ball Edition! Este é um projeto desenvolvido na 42 São Paulo, uma versão emocionante do clássico jogo so_long, inspirado no incrível universo de Dragon Ball.
+Bem-vindo ao so_long Dragon Ball Edition! Este é um projeto que desenvolvi frente a um desafio da 42sp, uma versão emocionante do clássico jogo so_long, inspirado no incrível universo de Dragon Ball.
 
 Neste jogo, você controla Goku em sua nuvem voadora, o Kinto'un, voando pelo céu em busca das esferas do dragão, enquanto enfrenta desafios emocionantes e aventuras eletrizantes!
 
@@ -12,7 +12,7 @@ Neste jogo, você controla Goku em sua nuvem voadora, o Kinto'un, voando pelo c�
 
 Este projeto utiliza a biblioteca MLX42, uma poderosa ferramenta baseada na X11, desenvolvida pela comunidade da 42. A MLX42 oferece funcionalidades gráficas avançadas para criar jogos e aplicações visualmente impressionantes.
 
-- **Instruções de Instalação**: Para mais informações sobre como instalar e utilizar a biblioteca MLX42, consulte [aqui](https://github.com/mlx42/mlx42).
+- **Instruções de Instalação**: Para mais informações sobre como instalar e utilizar a biblioteca MLX42, consulte [aqui](https://github.com/codam-coding-college/MLX42).
 
 ## Instalação
 
@@ -60,7 +60,7 @@ Aqui estão algumas capturas de tela emocionantes do jogo:
 ## Créditos
 
 - Desenvolvido por: Gabriel Lima - "Gapima".
-- Biblioteca MLX42: [Link para a biblioteca](https://github.com/mlx42/mlx42)
+- Biblioteca MLX42: [Link para a biblioteca](https://github.com/codam-coding-college/MLX42)
 
 ## Licença
 

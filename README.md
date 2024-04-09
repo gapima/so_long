@@ -39,8 +39,8 @@ Siga estes passos simples para executar o jogo:
 
 Aqui estão algumas capturas de tela emocionantes do jogo:
 
-- **Goku na Nuvem Nimbus:**
-![Goku on Nimbus](./img/goku.png)
+- **Goku na Kinto'un (Nuvem Voadora):**
+![Goku on Kinto'un](./img/goku.png)
 
 - **Esferas do Dragão (Coins):**
 ![Esferas do Dragão](./img/coin.png)

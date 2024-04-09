@@ -52,7 +52,7 @@ Aqui estão algumas capturas de tela emocionantes do jogo:
 ![Parede de nuvem](./img/wall.png)
 
 - **Ceu:**
-![Ceu](./img/wall.png)
+![Ceu](./img/floor.png)
 
 - **Shenlong (Saída):**
 ![Shenlong](./img/shenlong.png)

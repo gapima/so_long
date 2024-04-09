@@ -2,8 +2,6 @@
 
 ![Goku Flying](./img/goku_flying.gif)
 
-![Goku on Nimbus](./img/dragon.png)
-
 ## Descrição
 
 Bem-vindo ao so_long Dragon Ball Edition! Este é um projeto que desenvolvi frente a um desafio da 42sp, uma versão emocionante do clássico jogo so_long, inspirado no incrível universo de Dragon Ball.

@@ -39,7 +39,18 @@ Siga estes passos simples para executar o jogo:
 - Compilar:	
 	```bash 
 	make
-
+- Recompilar:
+	```bash 
+	make re
+- Excluir arquivos objetos:
+	```bash 
+	make clean
+- Excluir arquivos objetos e arquivo binario:
+	```bash 
+	make fclean
+- Roda o valgrind(teste memoryleak):
+	```bash 
+	make val
 ## Screenshots
 
 Aqui estão algumas capturas de tela emocionantes do jogo:

@@ -1,5 +1,7 @@
 # so_long Dragon Ball Edition
 
+![Goku Flying](goku_flying.gif)
+
 ![Goku on Nimbus](./img/dragon.png)
 
 ## Descrição

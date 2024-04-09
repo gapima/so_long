@@ -43,18 +43,23 @@ Aqui estão algumas capturas de tela emocionantes do jogo:
 ![Goku on Nimbus](./img/goku.png)
 
 - **Esferas do Dragão (Coins):**
-![Esferas do Dragão](./img/dragonball.png)
+![Esferas do Dragão](./img/coin.png)
 
 - **Contador de passo:**
 ![Contador de passo](./img/radardragon.png)
 
+- **Parede de nuvem:**
+![Parede de nuvem](./img/wall.png)
+
+- **Ceu:**
+![Ceu](./img/wall.png)
 
 - **Shenlong (Saída):**
 ![Shenlong](./img/shenlong.png)
 
 ## Créditos
 
-- Desenvolvido por: Seu Nome
+- Desenvolvido por: Gabriel Lima - "Gapima".
 - Biblioteca MLX42: [Link para a biblioteca](https://github.com/mlx42/mlx42)
 
 ## Licença

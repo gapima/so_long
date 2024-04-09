@@ -36,8 +36,9 @@ Siga estes passos simples para executar o jogo:
 - Esc: Fechar o jogo
 
 ## Comandos Makes
-- Compilar:	```bash 
-			make
+- Compilar:	
+```bash 
+make
 
 ## Screenshots
 

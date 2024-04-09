@@ -35,6 +35,10 @@ Siga estes passos simples para executar o jogo:
 - Setas direcionais: Movimentar Goku
 - Esc: Fechar o jogo
 
+## Comandos Makes
+- Compilar:	```bash 
+			make
+
 ## Screenshots
 
 Aqui estão algumas capturas de tela emocionantes do jogo:

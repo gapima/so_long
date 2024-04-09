@@ -37,8 +37,8 @@ Siga estes passos simples para executar o jogo:
 
 ## Comandos Makes
 - Compilar:	
-```bash 
-make
+	```bash 
+	make
 
 ## Screenshots
 

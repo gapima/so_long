@@ -22,7 +22,6 @@ Siga estes passos simples para executar o jogo:
 	```bash
 	git clone git@github.com:gapima/so_long.git
 
-
 2. **Compile o Projeto:**
 	```bash
 	make
@@ -30,7 +29,6 @@ Siga estes passos simples para executar o jogo:
 3. **Execute o Jogo:**
 	```bash
 	./solong maps/nome_mapa
-
 
 ## Controles
 

@@ -2,7 +2,7 @@
 
 ![Goku Flying](goku_flying.gif)
 
-![Goku on Nimbus](./img/dragon.png)
+```![Goku on Nimbus](./img/dragon.png)
 
 ## Descrição
 
